@@ -110,7 +110,10 @@
 .footer-top { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-bottom: 28px; }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; color: var(--muted-foreground); font-size: 10px; display: flex; justify-content: space-between; gap: 30px; }
 .dialog-detail { font-size: 14px; line-height: 1.8; color: var(--muted-foreground); }
-.contact-unavailable { background: var(--secondary); padding: 18px; border-radius: 6px; font-size: 14px; line-height: 1.8; }
+.contact-call { background: var(--secondary); padding: 18px; border-radius: 6px; font-size: 14px; line-height: 1.8; display: grid; gap: 10px; }
+.contact-call p { margin: 0; }
+.phone-link { color: var(--primary); font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.01em; text-decoration: none; justify-self: start; display: inline-flex; align-items: center; gap: 9px; border-bottom: 1px solid color-mix(in oklch, var(--primary) 35%, transparent); padding-bottom: 2px; }
+.phone-link:hover { text-decoration: underline; }
 .hero-copy { animation: appear .7s ease-out; }
 @keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @media(min-width:1600px) { .hero { min-height: 650px; } }
