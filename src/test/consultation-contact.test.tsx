@@ -11,7 +11,10 @@ describe("Consultation popup", () => {
     const Index = Route.options.component as ComponentType;
     render(<Index />);
 
-    fireEvent.click(screen.getAllByRole("button", { name: /let.s talk/i })[0]);
+    const talkButton = screen.getAllByRole("button", { name: /let.s talk/i })[0];
+    if (!talkButton) throw new Error("No 'Let's Talk' button rendered");
+    fireEvent.click(talkButton);
+
 
     expect(screen.getByRole("link", { name: /\(817\) 606-7789/ })).toHaveAttribute(
       "href",
