@@ -11,9 +11,9 @@ declare global {
   }
 }
 
-const measurementId = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY as
-  | string
-  | undefined;
+const measurementId = import.meta.env[
+  "VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY"
+] as string | undefined;
 
 let started = false;
 

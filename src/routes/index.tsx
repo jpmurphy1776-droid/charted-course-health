@@ -38,7 +38,7 @@ function Index() {
  const [coverage, setCoverage] = useState<number | null>(null);
  const selected = coverage === null ? undefined : coverageOptions[coverage];
  const consultation = (source: string) => { setMenuOpen(false); setCoverage(null); setConsultationOpen(true); trackEvent('consultation_started', { source }); };
- const openCoverage = (i: number) => { setCoverage(i); trackEvent('coverage_option_explored', { option: coverageOptions[i].title }); };
+ const openCoverage = (i: number) => { setCoverage(i); const option = coverageOptions[i]; if (option) trackEvent('coverage_option_explored', { option: option.title }); };
  return <div id="home">
   <header className="page-width site-header">
    <Brand/>
