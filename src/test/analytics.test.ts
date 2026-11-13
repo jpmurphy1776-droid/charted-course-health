@@ -46,6 +46,7 @@ describe("Google Analytics tracking", () => {
   });
 
   it("stays silent when no measurement id is configured", async () => {
+    vi.stubEnv("VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY", "");
     const { initGoogleAnalytics, trackEvent } = await import("@/lib/analytics");
 
     initGoogleAnalytics();
